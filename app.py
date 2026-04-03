@@ -90,10 +90,10 @@ left, right = st.columns([2, 1])
 with left:
     st.subheader("🔍 Query")
 
-    tcode = st.text_input(
-        "Enter SAP T-Code",
-        value=st.session_state.tcode,
-        key="tcode"
+  tcode = st.text_input(
+    "Enter SAP T-Code",
+    key="tcode"
+)
     )
 
     col1, col2 = st.columns(2)
@@ -120,7 +120,9 @@ with left:
 
     with col2:
         if st.button("🔄 Refresh"):
-            clear_all()
+            def clear_all():
+    st.session_state.clear()
+    st.rerun()
 
     st.subheader("📄 Response")
     st.write(st.session_state.response)
