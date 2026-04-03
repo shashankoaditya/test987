@@ -90,9 +90,9 @@ left, right = st.columns([2, 1])
 with left:
     st.subheader("🔍 Query")
 
-        tcode = st.text_input(
-        "Enter SAP T-Code",
-        key="tcode"
+     tcode = st.text_input(
+     "Enter SAP T-Code",
+     key="tcode"
 )
     )
 
